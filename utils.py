@@ -29,3 +29,12 @@ def pipe(value, *fns):
     for fn in fns:
         value = fn(value)
     return value
+
+
+def memoize(fn):
+    cache = {}
+    def wrapper(*args):
+        if args not in cache:
+            cache[args] = fn(*args)
+        return cache[args]
+    return wrapper
