@@ -15,3 +15,7 @@ def chunk(lst, size):
 
 def clamp(value, lo, hi):
     return max(lo, min(hi, value))
+
+
+def identity(x):
+    return x
