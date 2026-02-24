@@ -73,6 +73,18 @@ class Calculator:
         return a * b
 
     def divide(self, a, b):
+        """Divides two numbers.
+
+        Args:
+            a (float): The dividend.
+            b (float): The divisor.
+
+        Returns:
+            float: The result of dividing a by b.
+
+        Raises:
+            ValueError: If b is zero.
+        """
         if b == 0:
             raise ValueError("Cannot divide by zero")
         return a / b
