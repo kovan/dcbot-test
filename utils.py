@@ -19,3 +19,7 @@ def clamp(value, lo, hi):
 
 def identity(x):
     return x
+
+
+def compose(f, g):
+    return lambda x: f(g(x))
