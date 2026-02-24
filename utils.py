@@ -23,3 +23,9 @@ def identity(x):
 
 def compose(f, g):
     return lambda x: f(g(x))
+
+
+def pipe(value, *fns):
+    for fn in fns:
+        value = fn(value)
+    return value
